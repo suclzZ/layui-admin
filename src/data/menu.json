@@ -1,0 +1,53 @@
+[
+  {
+    "id": 1,
+    "text": "系统管理",
+    "cls": "layui-icon layui-icon-set-fill",
+    "link": "javascript:;",
+    "children": [
+      {
+        "id": 11,
+        "text": "用户管理",
+        "link":"user.html"
+      },
+      {
+        "id": 12,
+        "text": "机构管理",
+        "link":"agency.html"
+      },
+      {
+        "id": 13,
+        "text": "角色管理",
+        "link":"role.html"
+      },
+      {
+        "id": 14,
+        "text": "菜单管理",
+        "link":"menu.html"
+      },
+      {
+        "id": 15,
+        "text": "数据字典",
+        "link":"itemcode.html"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "应用服务",
+    "cls": "layui-icon layui-icon-website",
+    "link": "javascript:;",
+    "children": [
+      {
+        "id": 21,
+        "text": "用户信息",
+        "link":"admin-info.html"
+      },
+      {
+        "id": 22,
+        "text": "邮件信息",
+        "link":"email.html"
+      }
+    ]
+  }
+]
