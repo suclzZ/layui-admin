@@ -3,13 +3,21 @@
  * 没有form菜单出现问题
  * 如何通过hash保证刷新
  */
-layui.define([ 'form', 'element'], function(exports) {
+layui.define([ 'form', 'element','laydate'], function(exports) {
 	var element = layui.element,
-		$ = layui.jquery,
+        $ = layui.jquery,
+        laydate = layui.laydate,
 		TAB_OFFSET = 1,//主页占用tab
 		hideBtn = $('#hideBtn'),//隐藏菜单按钮
 		mainLayout = $('#main-layout'),//主区域
-		mainMask = $('.main-mask');//遮挡层
+        mainMask = $('.main-mask');//遮挡层
+        
+    (function(){
+        laydate.render({
+            elem: '.layui-date' //指定元素
+            , trigger: 'click'//默认的会出问题，说是必选是focus，然而并不是
+        });
+    })();
 
 	//菜单选中记录
     var Tab = function(el){
@@ -115,7 +123,7 @@ layui.define([ 'form', 'element'], function(exports) {
         function tabSelect(elem){
             let navA = $(elem).is('a')?$(elem): $(elem).find('a');
             let id = navA.attr('data-id'), url = navA.attr('data-url'), text = navA.attr('data-text');
-            window.location.hash='#'+id;
+            id && (window.location.hash = '#' + id);
             if( url && url!=='javascript:;' ){
                 if(tabs.is(id)){//
                     tabs.change(id);

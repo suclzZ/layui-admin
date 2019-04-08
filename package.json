@@ -1,0 +1,25 @@
+{
+  "name": "layui-admin-v2",
+  "version": "1.0.0",
+  "description": "based layui admin",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "start http://localhost:8085/views/index.html&node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suspring/layui-admin.git"
+  },
+  "keywords": [
+    "layui"
+  ],
+  "author": "sucl",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/suspring/layui-admin/issues"
+  },
+  "homepage": "https://github.com/suspring/layui-admin#readme",
+  "devDependencies": {
+    "express": "^4.16.4"
+  }
+}

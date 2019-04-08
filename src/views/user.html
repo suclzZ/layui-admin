@@ -42,7 +42,7 @@
         <div class="layui-form-item">
             <label class="layui-form-label">生日</label>
             <div class="layui-input-block">
-                <input type="text" name="birth" id="birth" placeholder="请输入" autocomplete="off" class="layui-input layui-date">
+                <input type="text" name="birth" placeholder="请输入" autocomplete="off" class="layui-input layui-date">
             </div>
         </div>
         <div class="layui-form-item">
@@ -63,7 +63,7 @@
         </div>
     </form>
     </div>
-    <div class="layui-form" id="table-list">
+    <div class="layui-form">
         <form class="layui-form" action="">
             <div class="layui-form-item">
                 <div class="layui-inline">
@@ -85,12 +85,8 @@
 <script src="../static/layui/layui.js" type="text/javascript" charset="utf-8"></script>
 <script src="../static/js/index.js" data-main="main" type="text/javascript" charset="utf-8"></script>
 <script>
-    layui.use(['layer','table','form','laydate','main'], function() {
-        var layer = layui.layer ,table =layui.table ,form = layui.form ,$=layui.$ ,laydate=layui.laydate,main = layui.main;
-        laydate.render({
-            elem: '#birth' //指定元素
-            ,trigger: 'click'//默认的会出问题，说是必选是focus，然而并不是
-        });
+    layui.use(['layer','table','form','main'], function() {
+        var layer = layui.layer ,table =layui.table ,form = layui.form ,$=layui.$,main = layui.main;
 
         //列表加载数据
         table.render({
@@ -183,7 +179,7 @@
             layer.open({
                 type: 1,
                 area: ['600px','500px'],
-                shade: 0,
+                shade: 0.5,
                 fixed:true,
                 skin:'custom-layer-class',
                 offset: 'auto',
