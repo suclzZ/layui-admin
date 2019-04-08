@@ -90,16 +90,6 @@
             </script>
         </div>
         <div class="layui-form">
-            <form class="layui-form" action="">
-                <div class="layui-form-item">
-                    <div class="layui-inline">
-                        <input type="text" name="title" required lay-verify="required" placeholder="请输入标题"
-                            autocomplete="off" class="layui-input">
-                    </div>
-                    <button class="layui-btn layui-btn-normal layui-btn-sm" lay-submit="search"><i
-                            class="layui-icon layui-icon-search"></i>搜索</button>
-                </div>
-            </form>
             <table id="table_codeitem" lay-filter="filter_table_codeitem" class="layui-table" lay-skin="line">
             </table>
             <script type="text/html" id="toolbar_codeitem">
@@ -129,7 +119,7 @@
                 cols: [
                     [
                         {
-                            field: 'id',
+                            field: 'groupId',
                             title: 'ID',
                             width: 100,
                             hide: true
@@ -176,7 +166,7 @@
                 cols: [
                     [
                         {
-                            field: 'id',
+                            field: 'itemId',
                             title: 'ID',
                             hide: true
                         },
